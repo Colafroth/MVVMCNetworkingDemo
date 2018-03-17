@@ -16,13 +16,16 @@
 		BC51C5C4205CC57900A97301 /* String+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C5C3205CC57900A97301 /* String+URL.swift */; };
 		BC51C5C6205CC8B900A97301 /* Dictionary+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C5C5205CC8B900A97301 /* Dictionary+URL.swift */; };
 		BC51C5E6205CDE9600A97301 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C5E5205CDE9600A97301 /* Operations.swift */; };
-		BC51C5EB205CF21D00A97301 /* ArticleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C5EA205CF21D00A97301 /* ArticleOperation.swift */; };
+		BC51C5EB205CF21D00A97301 /* ArticleCollectionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C5EA205CF21D00A97301 /* ArticleCollectionOperation.swift */; };
 		BC51C5EE205CF25500A97301 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C5ED205CF25500A97301 /* Article.swift */; };
 		BCD557E3205A7588008395D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD557E2205A7588008395D4 /* AppDelegate.swift */; };
-		BCD557E5205A7588008395D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD557E4205A7588008395D4 /* ViewController.swift */; };
+		BCD557E5205A7588008395D4 /* ArticleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD557E4205A7588008395D4 /* ArticleCollectionViewController.swift */; };
 		BCD557E8205A7588008395D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD557E6205A7588008395D4 /* Main.storyboard */; };
 		BCD557EA205A7588008395D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD557E9205A7588008395D4 /* Assets.xcassets */; };
 		BCD557ED205A7588008395D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD557EB205A7588008395D4 /* LaunchScreen.storyboard */; };
+		BCFF6386205D1299008E3061 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF6384205D1299008E3061 /* ArticleTableViewCell.swift */; };
+		BCFF6387205D1299008E3061 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFF6385205D1299008E3061 /* ArticleTableViewCell.xib */; };
+		BCFF638B205D166B008E3061 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF638A205D166B008E3061 /* Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,16 +40,19 @@
 		BC51C5C3205CC57900A97301 /* String+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+URL.swift"; sourceTree = "<group>"; };
 		BC51C5C5205CC8B900A97301 /* Dictionary+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+URL.swift"; sourceTree = "<group>"; };
 		BC51C5E5205CDE9600A97301 /* Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
-		BC51C5EA205CF21D00A97301 /* ArticleOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleOperation.swift; sourceTree = "<group>"; };
+		BC51C5EA205CF21D00A97301 /* ArticleCollectionOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionOperation.swift; sourceTree = "<group>"; };
 		BC51C5ED205CF25500A97301 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		BCD557DF205A7588008395D4 /* FairFaxInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairFaxInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD557E2205A7588008395D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BCD557E4205A7588008395D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BCD557E4205A7588008395D4 /* ArticleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewController.swift; sourceTree = "<group>"; };
 		BCD557E7205A7588008395D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCD557E9205A7588008395D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCD557EC205A7588008395D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCD557EE205A7588008395D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCD557F4205A840D008395D4 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		BCFF6384205D1299008E3061 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		BCFF6385205D1299008E3061 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		BCFF638A205D166B008E3061 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,7 @@
 			children = (
 				BC51C5C3205CC57900A97301 /* String+URL.swift */,
 				BC51C5C5205CC8B900A97301 /* Dictionary+URL.swift */,
+				BCFF638A205D166B008E3061 /* Reusable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -112,6 +119,7 @@
 		BC51C5E8205CF1F600A97301 /* ArticleFeature */ = {
 			isa = PBXGroup;
 			children = (
+				BCFF6383205D1258008E3061 /* UI */,
 				BC51C5EC205CF24B00A97301 /* Models */,
 				BC51C5E9205CF20900A97301 /* APIs */,
 			);
@@ -121,7 +129,7 @@
 		BC51C5E9205CF20900A97301 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
-				BC51C5EA205CF21D00A97301 /* ArticleOperation.swift */,
+				BC51C5EA205CF21D00A97301 /* ArticleCollectionOperation.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -158,7 +166,6 @@
 				BC51C5E8205CF1F600A97301 /* ArticleFeature */,
 				BC51C5E7205CF17200A97301 /* Commons */,
 				BCD557E2205A7588008395D4 /* AppDelegate.swift */,
-				BCD557E4205A7588008395D4 /* ViewController.swift */,
 				BCD557E6205A7588008395D4 /* Main.storyboard */,
 				BCD557E9205A7588008395D4 /* Assets.xcassets */,
 				BCD557EB205A7588008395D4 /* LaunchScreen.storyboard */,
@@ -166,6 +173,16 @@
 				BCD557F4205A840D008395D4 /* Debug.xcconfig */,
 			);
 			path = FairFaxInterview;
+			sourceTree = "<group>";
+		};
+		BCFF6383205D1258008E3061 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BCD557E4205A7588008395D4 /* ArticleCollectionViewController.swift */,
+				BCFF6384205D1299008E3061 /* ArticleTableViewCell.swift */,
+				BCFF6385205D1299008E3061 /* ArticleTableViewCell.xib */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCFF6387205D1299008E3061 /* ArticleTableViewCell.xib in Resources */,
 				BCD557ED205A7588008395D4 /* LaunchScreen.storyboard in Resources */,
 				BCD557EA205A7588008395D4 /* Assets.xcassets in Resources */,
 				BCD557E8205A7588008395D4 /* Main.storyboard in Resources */,
@@ -316,10 +334,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC51C5C4205CC57900A97301 /* String+URL.swift in Sources */,
+				BCFF6386205D1299008E3061 /* ArticleTableViewCell.swift in Sources */,
 				BC51C5C6205CC8B900A97301 /* Dictionary+URL.swift in Sources */,
-				BCD557E5205A7588008395D4 /* ViewController.swift in Sources */,
+				BCD557E5205A7588008395D4 /* ArticleCollectionViewController.swift in Sources */,
 				BC51C5E6205CDE9600A97301 /* Operations.swift in Sources */,
-				BC51C5EB205CF21D00A97301 /* ArticleOperation.swift in Sources */,
+				BC51C5EB205CF21D00A97301 /* ArticleCollectionOperation.swift in Sources */,
+				BCFF638B205D166B008E3061 /* Reusable.swift in Sources */,
 				BCD557E3205A7588008395D4 /* AppDelegate.swift in Sources */,
 				BC51C5BC205BE99E00A97301 /* Service.swift in Sources */,
 				BC51C5B8205A955600A97301 /* ServiceConfiguration.swift in Sources */,

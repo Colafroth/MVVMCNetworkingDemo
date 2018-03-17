@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct ArticleCollection: Codable {
+    var assets: [Article]
+}
+
 struct Article: Codable {
     var headline: String
     var theAbstract: String

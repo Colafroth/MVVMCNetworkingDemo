@@ -36,4 +36,9 @@ public final class ServiceConfiguration {
 
         self.init(name: name, baseURLString: baseURLString)
     }
+
+    static func make() -> ServiceConfiguration {
+        let config = ServiceConfiguration()
+        return config!
+    }
 }

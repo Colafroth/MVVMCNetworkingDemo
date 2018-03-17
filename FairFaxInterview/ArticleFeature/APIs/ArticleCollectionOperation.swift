@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ArticleOperation: JSONOperation<[Article]> {
+class ArticleCollectionOperation: JSONOperation<ArticleCollection> {
     convenience init() {
         let request = Request(endpoint: "1/coding_test/13ZZQX/full")
         self.init(request: request)
