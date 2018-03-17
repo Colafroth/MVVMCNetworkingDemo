@@ -5,3 +5,5 @@
 //  Created by AnTeng Lin on 15/3/18.
 //  Copyright © 2018 Anteng Lin. All rights reserved.
 //
+BASE_URL = bruce-v2-mob.fairfaxmedia.com.au/
+ENVIRONMENT_NAME = Debug

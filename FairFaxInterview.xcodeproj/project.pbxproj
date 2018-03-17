@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		96FBAB0D11687B3360FE7ADB /* Pods_FairFaxInterview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F322854BFC56789628E0B0 /* Pods_FairFaxInterview.framework */; };
+		BC51C5B8205A955600A97301 /* ServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C5B7205A955600A97301 /* ServiceConfiguration.swift */; };
+		BC51C5BA205BDFA100A97301 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C5B9205BDFA100A97301 /* Request.swift */; };
+		BC51C5BC205BE99E00A97301 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C5BB205BE99E00A97301 /* Service.swift */; };
+		BC51C5BE205C9D8100A97301 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C5BD205C9D8100A97301 /* Response.swift */; };
+		BC51C5C1205CBCF400A97301 /* NetworkingCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C5C0205CBCF400A97301 /* NetworkingCommon.swift */; };
+		BC51C5C4205CC57900A97301 /* String+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C5C3205CC57900A97301 /* String+URL.swift */; };
+		BC51C5C6205CC8B900A97301 /* Dictionary+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C5C5205CC8B900A97301 /* Dictionary+URL.swift */; };
+		BC51C5E6205CDE9600A97301 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C5E5205CDE9600A97301 /* Operations.swift */; };
+		BC51C5EB205CF21D00A97301 /* ArticleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C5EA205CF21D00A97301 /* ArticleOperation.swift */; };
+		BC51C5EE205CF25500A97301 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C5ED205CF25500A97301 /* Article.swift */; };
 		BCD557E3205A7588008395D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD557E2205A7588008395D4 /* AppDelegate.swift */; };
 		BCD557E5205A7588008395D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD557E4205A7588008395D4 /* ViewController.swift */; };
 		BCD557E8205A7588008395D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD557E6205A7588008395D4 /* Main.storyboard */; };
@@ -19,6 +29,16 @@
 		65F322854BFC56789628E0B0 /* Pods_FairFaxInterview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FairFaxInterview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E8B06681998C4C858E1B5E /* Pods-FairFaxInterview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairFaxInterview.release.xcconfig"; path = "Pods/Target Support Files/Pods-FairFaxInterview/Pods-FairFaxInterview.release.xcconfig"; sourceTree = "<group>"; };
 		A12CC1B9E9582C999AF8CB79 /* Pods-FairFaxInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairFaxInterview.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FairFaxInterview/Pods-FairFaxInterview.debug.xcconfig"; sourceTree = "<group>"; };
+		BC51C5B7205A955600A97301 /* ServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfiguration.swift; sourceTree = "<group>"; };
+		BC51C5B9205BDFA100A97301 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		BC51C5BB205BE99E00A97301 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		BC51C5BD205C9D8100A97301 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		BC51C5C0205CBCF400A97301 /* NetworkingCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingCommon.swift; sourceTree = "<group>"; };
+		BC51C5C3205CC57900A97301 /* String+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+URL.swift"; sourceTree = "<group>"; };
+		BC51C5C5205CC8B900A97301 /* Dictionary+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+URL.swift"; sourceTree = "<group>"; };
+		BC51C5E5205CDE9600A97301 /* Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
+		BC51C5EA205CF21D00A97301 /* ArticleOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleOperation.swift; sourceTree = "<group>"; };
+		BC51C5ED205CF25500A97301 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		BCD557DF205A7588008395D4 /* FairFaxInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairFaxInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD557E2205A7588008395D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCD557E4205A7588008395D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +46,7 @@
 		BCD557E9205A7588008395D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCD557EC205A7588008395D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCD557EE205A7588008395D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCD557F4205A840D008395D4 /* Interview.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Interview.xcconfig; sourceTree = "<group>"; };
+		BCD557F4205A840D008395D4 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +78,62 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BC51C5B6205A94B900A97301 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BC51C5B7205A955600A97301 /* ServiceConfiguration.swift */,
+				BC51C5B9205BDFA100A97301 /* Request.swift */,
+				BC51C5BB205BE99E00A97301 /* Service.swift */,
+				BC51C5BD205C9D8100A97301 /* Response.swift */,
+				BC51C5C0205CBCF400A97301 /* NetworkingCommon.swift */,
+				BC51C5E5205CDE9600A97301 /* Operations.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BC51C5C2205CC56900A97301 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC51C5C3205CC57900A97301 /* String+URL.swift */,
+				BC51C5C5205CC8B900A97301 /* Dictionary+URL.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BC51C5E7205CF17200A97301 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				BC51C5C2205CC56900A97301 /* Extensions */,
+				BC51C5B6205A94B900A97301 /* Networking */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		BC51C5E8205CF1F600A97301 /* ArticleFeature */ = {
+			isa = PBXGroup;
+			children = (
+				BC51C5EC205CF24B00A97301 /* Models */,
+				BC51C5E9205CF20900A97301 /* APIs */,
+			);
+			path = ArticleFeature;
+			sourceTree = "<group>";
+		};
+		BC51C5E9205CF20900A97301 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				BC51C5EA205CF21D00A97301 /* ArticleOperation.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		BC51C5EC205CF24B00A97301 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC51C5ED205CF25500A97301 /* Article.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BCD557D6205A7588008395D4 = {
 			isa = PBXGroup;
 			children = (
@@ -79,13 +155,15 @@
 		BCD557E1205A7588008395D4 /* FairFaxInterview */ = {
 			isa = PBXGroup;
 			children = (
+				BC51C5E8205CF1F600A97301 /* ArticleFeature */,
+				BC51C5E7205CF17200A97301 /* Commons */,
 				BCD557E2205A7588008395D4 /* AppDelegate.swift */,
 				BCD557E4205A7588008395D4 /* ViewController.swift */,
 				BCD557E6205A7588008395D4 /* Main.storyboard */,
 				BCD557E9205A7588008395D4 /* Assets.xcassets */,
 				BCD557EB205A7588008395D4 /* LaunchScreen.storyboard */,
 				BCD557EE205A7588008395D4 /* Info.plist */,
-				BCD557F4205A840D008395D4 /* Interview.xcconfig */,
+				BCD557F4205A840D008395D4 /* Debug.xcconfig */,
 			);
 			path = FairFaxInterview;
 			sourceTree = "<group>";
@@ -102,8 +180,8 @@
 				BCD557DC205A7588008395D4 /* Frameworks */,
 				BCD557DD205A7588008395D4 /* Resources */,
 				34AF46A41236E3CFC4AE14B9 /* [CP] Embed Pods Frameworks */,
-				D7BDAE7D7862446AB41F8037 /* [CP] Copy Pods Resources */,
 				BC51C5B5205A8B6200A97301 /* ShellScript */,
+				4A13D7204736EC8252799378 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -184,6 +262,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FairFaxInterview/Pods-FairFaxInterview-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4A13D7204736EC8252799378 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FairFaxInterview/Pods-FairFaxInterview-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7BAF932E9462E144FFDC5C20 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,21 +308,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
-		D7BDAE7D7862446AB41F8037 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FairFaxInterview/Pods-FairFaxInterview-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -237,8 +315,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC51C5C4205CC57900A97301 /* String+URL.swift in Sources */,
+				BC51C5C6205CC8B900A97301 /* Dictionary+URL.swift in Sources */,
 				BCD557E5205A7588008395D4 /* ViewController.swift in Sources */,
+				BC51C5E6205CDE9600A97301 /* Operations.swift in Sources */,
+				BC51C5EB205CF21D00A97301 /* ArticleOperation.swift in Sources */,
 				BCD557E3205A7588008395D4 /* AppDelegate.swift in Sources */,
+				BC51C5BC205BE99E00A97301 /* Service.swift in Sources */,
+				BC51C5B8205A955600A97301 /* ServiceConfiguration.swift in Sources */,
+				BC51C5EE205CF25500A97301 /* Article.swift in Sources */,
+				BC51C5BE205C9D8100A97301 /* Response.swift in Sources */,
+				BC51C5BA205BDFA100A97301 /* Request.swift in Sources */,
+				BC51C5C1205CBCF400A97301 /* NetworkingCommon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +354,7 @@
 /* Begin XCBuildConfiguration section */
 		BCD557EF205A7588008395D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCD557F4205A840D008395D4 /* Interview.xcconfig */;
+			baseConfigurationReference = BCD557F4205A840D008395D4 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -324,7 +412,7 @@
 		};
 		BCD557F0205A7588008395D4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCD557F4205A840D008395D4 /* Interview.xcconfig */;
+			baseConfigurationReference = BCD557F4205A840D008395D4 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
