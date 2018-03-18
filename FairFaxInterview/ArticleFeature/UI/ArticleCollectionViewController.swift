@@ -8,43 +8,66 @@
 
 import UIKit
 
+protocol ArticleCollectionViewControllerDelegate: class {
+    func didTapArticle(_ article: Article)
+}
+
 class ArticleCollectionViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
 
-    private var articles = [Article]()
+    weak var delegate: ArticleCollectionViewControllerDelegate?
+
+    var viewModel: ArticleCollectionViewModel! {
+        didSet {
+            setupViewModel()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        initStyles()
         registerCells()
-        loadArticles()
+        viewModel.loadArticles()
+    }
+
+    private func initStyles() {
+        tableView.backgroundColor = .lightGray
+        tableView.separatorStyle = .none
     }
 
     private func registerCells() {
         tableView.register(ArticleTableViewCell.self)
     }
 
-    private func loadArticles() {
-        let service = Service(configuration: ServiceConfiguration.make())
-        ArticleCollectionOperation().execute(in: service, onSuccess: { [weak self] articleCollection in
+    private func setupViewModel() {
+        viewModel.loadArticlesDidComplete = { [weak self] in
             guard let strongSelf = self else { return }
-            print(strongSelf.articles)
-            strongSelf.articles = articleCollection.assets
+            strongSelf.setupNavigationBar()
             strongSelf.tableView.reloadData()
-        }) { error in
-            print(error)
         }
+    }
+
+    private func setupNavigationBar() {
+        navigationItem.title = viewModel.titleString
+    }
+}
+
+extension ArticleCollectionViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let article = viewModel.articles[indexPath.row]
+        delegate?.didTapArticle(article)
     }
 }
 
 extension ArticleCollectionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ArticleTableViewCell = tableView.dequeueReusableCell(indexPath: indexPath)
-        let article = articles[indexPath.row]
+        let article = viewModel.articles[indexPath.row]
         cell.populate(with: article)
         return cell
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return articles.count
+        return viewModel.articles.count
     }
 }
