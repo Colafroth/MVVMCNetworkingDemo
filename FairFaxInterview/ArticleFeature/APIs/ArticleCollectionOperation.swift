@@ -9,6 +9,7 @@
 import Foundation
 
 class ArticleCollectionOperation: JSONOperation<ArticleCollection> {
+    // MARK: - Inits
     convenience init() {
         let request = Request(endpoint: "1/coding_test/13ZZQX/full")
         self.init(request: request)

@@ -19,12 +19,15 @@ protocol OperationProtocol {
 class JSONOperation<Output: Decodable>: OperationProtocol {
     typealias T = Output
 
+    // MARK: - Properties
     var request: RequestProtocol
 
+    // MARK: - Inits
     init(request: RequestProtocol) {
         self.request = request
     }
 
+    // MARK: - Public Functions
     func execute(in service: ServiceProtocol, onSuccess: ((Output) -> Void)?, onError: ErrorHandler?) {
         service.execute(request, onSuccess: { response in
             do {

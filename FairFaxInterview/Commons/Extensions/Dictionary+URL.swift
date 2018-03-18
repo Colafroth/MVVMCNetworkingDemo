@@ -22,8 +22,7 @@ extension Dictionary where Key == String, Value == Any {
         guard let urlFieldsString = urlComponents.url else {
             throw NetworkError.fieldsNotEncodable
         }
-        
+
         return urlFieldsString.absoluteString
     }
 }
-

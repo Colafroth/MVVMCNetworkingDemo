@@ -37,6 +37,7 @@ public final class ServiceConfiguration {
         self.init(name: name, baseURLString: baseURLString)
     }
 
+    // MARK: - Public Functions
     static func make() -> ServiceConfiguration {
         let config = ServiceConfiguration()
         return config!

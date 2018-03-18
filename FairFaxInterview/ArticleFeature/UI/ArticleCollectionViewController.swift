@@ -13,8 +13,10 @@ protocol ArticleCollectionViewControllerDelegate: class {
 }
 
 class ArticleCollectionViewController: UIViewController {
+    // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
 
+    // MARK: - Properties
     weak var delegate: ArticleCollectionViewControllerDelegate?
 
     var viewModel: ArticleCollectionViewModel! {
@@ -23,6 +25,7 @@ class ArticleCollectionViewController: UIViewController {
         }
     }
 
+    // MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         initStyles()
@@ -30,6 +33,7 @@ class ArticleCollectionViewController: UIViewController {
         viewModel.loadArticles()
     }
 
+    // MARK: - Private Functions
     private func initStyles() {
         tableView.backgroundColor = .lightGray
         tableView.separatorStyle = .none
@@ -52,6 +56,7 @@ class ArticleCollectionViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDelegate Conformance
 extension ArticleCollectionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let article = viewModel.articles[indexPath.row]
@@ -59,6 +64,7 @@ extension ArticleCollectionViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - UITableViewDataSource Conformance
 extension ArticleCollectionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ArticleTableViewCell = tableView.dequeueReusableCell(indexPath: indexPath)

@@ -47,6 +47,7 @@ class ArticleCollectionViewModelTest: XCTestCase {
         super.tearDown()
     }
 
+    //Test the image that has zero width * height get discarded
     func testZeroSizeImage() {
         mockOperation.mockArticleCollection = ArticleCollection(displayName: "ArticleTest", assets: [article3])
         viewModel.loadArticles(operation: mockOperation)
@@ -54,6 +55,7 @@ class ArticleCollectionViewModelTest: XCTestCase {
         XCTAssertNil(viewModel.articles.first?.displayImageURL)
     }
 
+    //Test the articles sort in the order based on timeStamp
     func testTimeStampSorting() {
         mockOperation.mockArticleCollection = ArticleCollection(displayName: "ArticleTest", assets: [article1, article2, article3])
         viewModel.loadArticles(operation: mockOperation)
@@ -61,6 +63,7 @@ class ArticleCollectionViewModelTest: XCTestCase {
         XCTAssertEqual(viewModel.articles.first?.headline, article3.headline)
     }
 
+    //Test the articles from response is empty
     func testEmptyArticles() {
         mockOperation.mockArticleCollection = ArticleCollection(displayName: "ArticleTest", assets: [])
         viewModel.loadArticles(operation: mockOperation)

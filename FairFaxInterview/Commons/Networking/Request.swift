@@ -20,6 +20,7 @@ protocol RequestProtocol {
 }
 
 extension RequestProtocol {
+    // MARK: - Public Functions
     func headers(in service: ServiceProtocol) -> HeadersDictionary {
         var headers = service.headers
         self.headers?.forEach {
@@ -52,6 +53,7 @@ extension RequestProtocol {
 }
 
 struct Request: RequestProtocol {
+    // MARK: - Properties
     var endpoint: String
     var parameters: ParametersDictionary?
     var fields: ParametersDictionary?
@@ -61,6 +63,7 @@ struct Request: RequestProtocol {
     var cachePolicy: URLRequest.CachePolicy?
     var timeout: TimeInterval?
 
+    // MARK: - Inits
     init(endpoint: String,
          parameters: ParametersDictionary? = nil,
          fields: ParametersDictionary? = nil,

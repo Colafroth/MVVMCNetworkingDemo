@@ -11,10 +11,12 @@ import UIKit
 import WebKit
 
 class ArticleCollectionCoordinator: Coordinatable {
+    // MARK: - Properties
     var childCoordinators = [Coordinatable]()
     var rootViewController: UINavigationController!
     var articleCollectionViewController: ArticleCollectionViewController!
 
+    // MARK: - Public Functions
     func start() {
         let articleCollectionViewController: ArticleCollectionViewController = UIStoryboard(storyboard: .main).instantiateViewController()
         self.articleCollectionViewController = articleCollectionViewController
@@ -24,6 +26,7 @@ class ArticleCollectionCoordinator: Coordinatable {
     }
 }
 
+// MARK: - ArticleCollectionViewControllerDelegate Conformance
 extension ArticleCollectionCoordinator: ArticleCollectionViewControllerDelegate {
     func didTapArticle(_ article: Article) {
         guard let url = URL(string: article.url) else { return }

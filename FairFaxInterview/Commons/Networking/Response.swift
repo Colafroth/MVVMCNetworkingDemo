@@ -31,13 +31,14 @@ enum ResponseResult {
 }
 
 struct Response: ResponseProtocol {
-
+    // MARK: - Properties
     var result: ResponseResult
     var httpResponse: HTTPURLResponse?
     var statusCode: Int?
     var data: Data!
     var request: RequestProtocol
 
+    // MARK: - Inits
     init(alamofireResponse: DefaultDataResponse, request: RequestProtocol) {
         self.result = ResponseResult.make(response: alamofireResponse)
         self.httpResponse = alamofireResponse.response

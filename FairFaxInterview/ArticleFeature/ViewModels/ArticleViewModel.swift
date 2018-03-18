@@ -9,5 +9,6 @@
 import Foundation
 
 struct ArticleViewModel {
+    // MARK: - Properties
     var articleURL: URL
 }

@@ -17,15 +17,18 @@ protocol ServiceProtocol {
 }
 
 struct Service: ServiceProtocol {
+    // MARK: - Properties
     var configuration: ServiceConfiguration
     var headers: HeadersDictionary {
         return configuration.headers
     }
 
+    // MARK: - Inits
     init(configuration: ServiceConfiguration) {
         self.configuration = configuration
     }
 
+    // MARK: - Public Functions
     func execute(_ request: RequestProtocol, onSuccess: ((ResponseProtocol) -> Void)?, onError: ErrorHandler?) {
         var urlRequest: URLRequest!
         do {

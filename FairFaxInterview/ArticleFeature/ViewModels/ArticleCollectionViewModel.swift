@@ -12,14 +12,16 @@ typealias SuccessHandler = (() -> Void)
 typealias FailureHandler = ((Error) -> Void)
 
 class ArticleCollectionViewModel {
+    // MARK: - Properties
     var articles = [Article]()
     var titleString = ""
 
     var loadArticlesDidSuccess: SuccessHandler?
     var loadArticlesDidFail: FailureHandler?
 
+    // MARK: - Public Functions
     func loadArticles(operation: JSONOperation<ArticleCollection> = ArticleCollectionOperation()) {
-        var service = Service(configuration: ServiceConfiguration.make())
+        let service = Service(configuration: ServiceConfiguration.make())
         operation.execute(in: service, onSuccess: { [weak self] articleCollection in
             guard let strongSelf = self else { return }
             strongSelf.articles = strongSelf.processedArticles(articleCollection.assets)
@@ -30,6 +32,7 @@ class ArticleCollectionViewModel {
         })
     }
 
+    // MARK: - Private Functions
     private func processedArticles(_ articles: [Article]) -> [Article] {
         let sortedArticles = articles.sorted { return $0.timeStamp > $1.timeStamp }
         let finalArticles = sortedArticles.map { return articleWithDisplayImageURL(from: $0) }

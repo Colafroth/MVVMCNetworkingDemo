@@ -11,9 +11,13 @@ import UIKit
 import WebKit
 
 class ArticleViewController: UIViewController {
+    // MARK: - IBOutlets
     @IBOutlet weak var webView: WKWebView!
+
+    // MARK: - Properties
     var viewModel: ArticleViewModel!
 
+    // MARK: - Life Cycles
     override func viewWillAppear(_ animated: Bool) {
         webView.load(URLRequest(url: viewModel.articleURL))
     }

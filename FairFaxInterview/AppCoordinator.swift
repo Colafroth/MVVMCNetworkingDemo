@@ -10,13 +10,16 @@ import Foundation
 import UIKit
 
 class AppCoordinator: Coordinatable {
+    // MARK: - Properties
     var childCoordinators = [Coordinatable]()
     var window: UIWindow
 
+    // MARK: - Inits
     init(window: UIWindow) {
         self.window = window
     }
 
+    // MARK: - Public Functions
     func start() {
         let coordinator = ArticleCollectionCoordinator()
         coordinator.start()

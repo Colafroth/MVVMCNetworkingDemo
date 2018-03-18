@@ -35,6 +35,7 @@ class NetworkingTest: XCTestCase {
         super.tearDown()
     }
 
+    //Test the server status code passes correctly
     func testSuccessStatusCode() {
         var statusCode: Int?
         var error: Error?
@@ -51,6 +52,7 @@ class NetworkingTest: XCTestCase {
         XCTAssertNotEqual(statusCode, 201)
     }
 
+    //Test url passed is correct
     func testSuccessURL() {
         var urlString: String?
         var error: Error?
@@ -67,6 +69,7 @@ class NetworkingTest: XCTestCase {
         XCTAssertNotEqual(urlString, "http://testing/1234")
     }
 
+    //Test error being delivered correctly
     func testError() {
         var response: ResponseProtocol?
         var error: NetworkError?
