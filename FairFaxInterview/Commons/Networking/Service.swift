@@ -13,7 +13,7 @@ protocol ServiceProtocol {
     var configuration: ServiceConfiguration { get }
     var headers: HeadersDictionary { get }
     init(configuration: ServiceConfiguration)
-    func execute(_ request: RequestProtocol, onSuccess: ((Response) -> Void)?, onError: ErrorHandler?)
+    func execute(_ request: RequestProtocol, onSuccess: ((ResponseProtocol) -> Void)?, onError: ErrorHandler?)
 }
 
 struct Service: ServiceProtocol {
@@ -26,7 +26,7 @@ struct Service: ServiceProtocol {
         self.configuration = configuration
     }
 
-    func execute(_ request: RequestProtocol, onSuccess: ((Response) -> Void)?, onError: ErrorHandler?) {
+    func execute(_ request: RequestProtocol, onSuccess: ((ResponseProtocol) -> Void)?, onError: ErrorHandler?) {
         var urlRequest: URLRequest!
         do {
             urlRequest = try request.urlRequest(in: self)
@@ -38,7 +38,7 @@ struct Service: ServiceProtocol {
 
         let dataRequest = Alamofire.request(urlRequest)
         dataRequest.response { defaultDataResponse in
-            let response = Response(alamofireResponse: defaultDataResponse)
+            let response = Response(alamofireResponse: defaultDataResponse, request: request)
             switch response.result {
             case .success:
                 onSuccess?(response)

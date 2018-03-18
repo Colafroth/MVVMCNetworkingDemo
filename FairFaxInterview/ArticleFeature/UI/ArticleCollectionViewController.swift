@@ -40,7 +40,7 @@ class ArticleCollectionViewController: UIViewController {
     }
 
     private func setupViewModel() {
-        viewModel.loadArticlesDidComplete = { [weak self] in
+        viewModel.loadArticlesDidSuccess = { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.setupNavigationBar()
             strongSelf.tableView.reloadData()

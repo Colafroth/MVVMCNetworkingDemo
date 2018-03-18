@@ -34,7 +34,19 @@
 		BCFF6399205E17A7008E3061 /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF6398205E17A7008E3061 /* String+Utility.swift */; };
 		BCFF639B205E2753008E3061 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF639A205E2753008E3061 /* ArticleViewController.swift */; };
 		BCFF639D205E27C9008E3061 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF639C205E27C9008E3061 /* ArticleViewModel.swift */; };
+		BCFF63A5205E39A5008E3061 /* FairFaxInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF63A4205E39A5008E3061 /* FairFaxInterviewTests.swift */; };
+		BCFF63AD205E58E5008E3061 /* ArticleCollectionViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF63AC205E58E5008E3061 /* ArticleCollectionViewModelTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCFF63A7205E39A5008E3061 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCD557D7205A7588008395D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCD557DE205A7588008395D4;
+			remoteInfo = FairFaxInterview;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		65F322854BFC56789628E0B0 /* Pods_FairFaxInterview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FairFaxInterview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +81,10 @@
 		BCFF6398205E17A7008E3061 /* String+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utility.swift"; sourceTree = "<group>"; };
 		BCFF639A205E2753008E3061 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		BCFF639C205E27C9008E3061 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		BCFF63A2205E39A5008E3061 /* FairFaxInterviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FairFaxInterviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCFF63A4205E39A5008E3061 /* FairFaxInterviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairFaxInterviewTests.swift; sourceTree = "<group>"; };
+		BCFF63A6205E39A5008E3061 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCFF63AC205E58E5008E3061 /* ArticleCollectionViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +93,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				96FBAB0D11687B3360FE7ADB /* Pods_FairFaxInterview.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCFF639F205E39A5008E3061 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				BCD557E1205A7588008395D4 /* FairFaxInterview */,
+				BCFF63A3205E39A5008E3061 /* FairFaxInterviewTests */,
 				BCD557E0205A7588008395D4 /* Products */,
 				20145400A9DE8D510BFBA27D /* Pods */,
 				1D88C6F20409E692B087937B /* Frameworks */,
@@ -177,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				BCD557DF205A7588008395D4 /* FairFaxInterview.app */,
+				BCFF63A2205E39A5008E3061 /* FairFaxInterviewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,6 +250,16 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		BCFF63A3205E39A5008E3061 /* FairFaxInterviewTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF63AC205E58E5008E3061 /* ArticleCollectionViewModelTest.swift */,
+				BCFF63A4205E39A5008E3061 /* FairFaxInterviewTests.swift */,
+				BCFF63A6205E39A5008E3061 /* Info.plist */,
+			);
+			path = FairFaxInterviewTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,6 +284,24 @@
 			productReference = BCD557DF205A7588008395D4 /* FairFaxInterview.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BCFF63A1205E39A5008E3061 /* FairFaxInterviewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCFF63A9205E39A5008E3061 /* Build configuration list for PBXNativeTarget "FairFaxInterviewTests" */;
+			buildPhases = (
+				BCFF639E205E39A5008E3061 /* Sources */,
+				BCFF639F205E39A5008E3061 /* Frameworks */,
+				BCFF63A0205E39A5008E3061 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCFF63A8205E39A5008E3061 /* PBXTargetDependency */,
+			);
+			name = FairFaxInterviewTests;
+			productName = FairFaxInterviewTests;
+			productReference = BCFF63A2205E39A5008E3061 /* FairFaxInterviewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -262,6 +315,11 @@
 					BCD557DE205A7588008395D4 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					BCFF63A1205E39A5008E3061 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BCD557DE205A7588008395D4;
 					};
 				};
 			};
@@ -279,6 +337,7 @@
 			projectRoot = "";
 			targets = (
 				BCD557DE205A7588008395D4 /* FairFaxInterview */,
+				BCFF63A1205E39A5008E3061 /* FairFaxInterviewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -292,6 +351,13 @@
 				BCD557ED205A7588008395D4 /* LaunchScreen.storyboard in Resources */,
 				BCD557EA205A7588008395D4 /* Assets.xcassets in Resources */,
 				BCD557E8205A7588008395D4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCFF63A0205E39A5008E3061 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +464,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BCFF639E205E39A5008E3061 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCFF63A5205E39A5008E3061 /* FairFaxInterviewTests.swift in Sources */,
+				BCFF63AD205E58E5008E3061 /* ArticleCollectionViewModelTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCFF63A8205E39A5008E3061 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCD557DE205A7588008395D4 /* FairFaxInterview */;
+			targetProxy = BCFF63A7205E39A5008E3061 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BCD557E6205A7588008395D4 /* Main.storyboard */ = {
@@ -565,6 +648,38 @@
 			};
 			name = Release;
 		};
+		BCFF63AA205E39A5008E3061 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CDFABBUJB6;
+				INFOPLIST_FILE = FairFaxInterviewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AntengLin.FairFaxInterviewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FairFaxInterview.app/FairFaxInterview";
+			};
+			name = Debug;
+		};
+		BCFF63AB205E39A5008E3061 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CDFABBUJB6;
+				INFOPLIST_FILE = FairFaxInterviewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AntengLin.FairFaxInterviewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FairFaxInterview.app/FairFaxInterview";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -582,6 +697,15 @@
 			buildConfigurations = (
 				BCD557F2205A7588008395D4 /* Debug */,
 				BCD557F3205A7588008395D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCFF63A9205E39A5008E3061 /* Build configuration list for PBXNativeTarget "FairFaxInterviewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCFF63AA205E39A5008E3061 /* Debug */,
+				BCFF63AB205E39A5008E3061 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

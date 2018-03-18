@@ -13,7 +13,7 @@ struct ArticleCollection: Codable {
     var assets: [Article]
 }
 
-class Article: Codable {
+struct Article: Codable {
     var headline: String
     var theAbstract: String
     var byLine: String
