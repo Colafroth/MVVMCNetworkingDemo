@@ -196,7 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				BCD557E1205A7588008395D4 /* MVVMCNetworkingDemo */,
-				BCFF63A3205E39A5008E3061 /* FairFaxInterviewTests */,
+				BCFF63A3205E39A5008E3061 /* MVVMCNetworkingDemoTests */,
 				BCD557E0205A7588008395D4 /* Products */,
 				20145400A9DE8D510BFBA27D /* Pods */,
 				1D88C6F20409E692B087937B /* Frameworks */,
@@ -256,14 +256,14 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
-		BCFF63A3205E39A5008E3061 /* FairFaxInterviewTests */ = {
+		BCFF63A3205E39A5008E3061 /* MVVMCNetworkingDemoTests */ = {
 			isa = PBXGroup;
 			children = (
 				BCFF63AC205E58E5008E3061 /* ArticleCollectionViewModelTest.swift */,
 				BCFF63A4205E39A5008E3061 /* FairFaxInterviewTests.swift */,
 				BCFF63A6205E39A5008E3061 /* Info.plist */,
 			);
-			path = FairFaxInterviewTests;
+			path = MVVMCNetworkingDemoTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -660,9 +660,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CDFABBUJB6;
-				INFOPLIST_FILE = FairFaxInterviewTests/Info.plist;
+				INFOPLIST_FILE = MVVMCNetworkingDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = AntengLin.FairFaxInterviewTests;
+				PRODUCT_BUNDLE_IDENTIFIER = AntengLin.MVVMCNetworkingDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -676,9 +676,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CDFABBUJB6;
-				INFOPLIST_FILE = FairFaxInterviewTests/Info.plist;
+				INFOPLIST_FILE = MVVMCNetworkingDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = AntengLin.FairFaxInterviewTests;
+				PRODUCT_BUNDLE_IDENTIFIER = AntengLin.MVVMCNetworkingDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

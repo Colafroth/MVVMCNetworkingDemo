@@ -1,17 +1,15 @@
 //
-//  ArticleCollectionViewModelTest.swift
-//  FairFaxInterviewTests
+//  MVVMCNetworkingDemoTests.swift
+//  MVVMCNetworkingDemoTests
 //
 //  Created by AnTeng Lin on 18/3/18.
 //  Copyright © 2018 Anteng Lin. All rights reserved.
 //
 
 import XCTest
-@testable import FairFaxInterview
+@testable import MVVMCNetworkingDemo
 
-class ArticleCollectionViewModelTest: XCTestCase {
-
-    var viewModel: ArticleCollectionViewModel!
+class NetworkingTest: XCTestCase {
 
     var mockServiceConfiguration: ServiceConfiguration!
     var mockRequest: MockRequest!
@@ -19,26 +17,16 @@ class ArticleCollectionViewModelTest: XCTestCase {
     var mockService: MockService!
     var mockResponse: MockResponse!
 
-    var article1: Article!
-    var article2: Article!
-    var article3: Article!
-
     override func setUp() {
         super.setUp()
-        viewModel = ArticleCollectionViewModel()
         mockServiceConfiguration = ServiceConfiguration(name: "Testing", baseURLString: "http://testing/")!
         mockRequest = MockRequest(endpoint: "123")
         mockService = MockService(configuration: mockServiceConfiguration)
         mockResponse = MockResponse(result: .success(statusCode: 200), httpResponse: nil, statusCode: 200, data: Data(), request: mockRequest)
         mockOperation = MockOperation(request: mockRequest)
-
-        article1 = Article(headline: "article1", theAbstract: "theAbstract1", byLine: "byLine1", timeStamp: 100, url: "http://article1", relatedImages: [RelatedImage(id: 1, width: 1, height: 2, url: "http://image1")], displayImageURL: nil)
-        article2 = Article(headline: "article2", theAbstract: "theAbstract2", byLine: "byLine2", timeStamp: 200, url: "http://article2", relatedImages: [RelatedImage(id: 1, width: 0, height: 0, url: "http://image1"), RelatedImage(id: 2, width: 5, height: 5, url: "http://image2"), RelatedImage(id: 3, width: 1000, height: 100, url: "http://image3")], displayImageURL: nil)
-        article3 = Article(headline: "article3", theAbstract: "theAbstract3", byLine: "byLine3", timeStamp: 300, url: "http://article3", relatedImages: [RelatedImage(id: 1, width: 0, height: 0, url: "http://image1")], displayImageURL: nil)
     }
 
     override func tearDown() {
-        viewModel = nil
         mockServiceConfiguration = nil
         mockRequest = nil
         mockOperation = nil
@@ -47,28 +35,60 @@ class ArticleCollectionViewModelTest: XCTestCase {
         super.tearDown()
     }
 
-    //Test the image that has zero width * height get discarded
-    func testZeroSizeImage() {
-        mockOperation.mockArticleCollection = ArticleCollection(displayName: "ArticleTest", assets: [article3])
-        viewModel.loadArticles(operation: mockOperation)
+    //Test the server status code passes correctly
+    func testSuccessStatusCode() {
+        var statusCode: Int?
+        var error: Error?
 
-        XCTAssertNil(viewModel.articles.first?.displayImageURL)
+        mockService.mockResponse = mockResponse
+        mockService.execute(mockRequest, onSuccess: { response in
+            statusCode = response.statusCode
+        }, onError: { theError in
+            error = theError
+        })
+
+        XCTAssertNil(error)
+        XCTAssertEqual(statusCode, 200)
+        XCTAssertNotEqual(statusCode, 201)
     }
 
-    //Test the articles sort in the order based on timeStamp
-    func testTimeStampSorting() {
-        mockOperation.mockArticleCollection = ArticleCollection(displayName: "ArticleTest", assets: [article1, article2, article3])
-        viewModel.loadArticles(operation: mockOperation)
+    //Test url passed is correct
+    func testSuccessURL() {
+        var urlString: String?
+        var error: Error?
 
-        XCTAssertEqual(viewModel.articles.first?.headline, article3.headline)
+        mockService.mockResponse = mockResponse
+        mockService.execute(mockRequest, onSuccess: { response in
+            urlString = try! response.request.url(in: self.mockService).absoluteString
+        }, onError: { theError in
+            error = theError
+        })
+
+        XCTAssertNil(error)
+        XCTAssertEqual(urlString, "http://testing/123")
+        XCTAssertNotEqual(urlString, "http://testing/1234")
     }
 
-    //Test the articles from response is empty
-    func testEmptyArticles() {
-        mockOperation.mockArticleCollection = ArticleCollection(displayName: "ArticleTest", assets: [])
-        viewModel.loadArticles(operation: mockOperation)
+    //Test error being delivered correctly
+    func testError() {
+        var response: ResponseProtocol?
+        var error: NetworkError?
 
-        XCTAssertTrue(viewModel.articles.isEmpty)
+        mockService.mockError = NetworkError.fieldsNotEncodable
+        mockService.execute(mockRequest, onSuccess: { theResponse in
+            response = theResponse
+        }, onError: { theError in
+            guard let theError = theError as? NetworkError else { return }
+            error = theError
+        })
+
+        if let error = error,
+            case NetworkError.fieldsNotEncodable = error {
+            XCTAssert(true)
+        } else {
+            XCTAssert(false)
+        }
+        XCTAssertNil(response)
     }
 
     struct MockResponse: ResponseProtocol {
